@@ -1,0 +1,31 @@
+<?php
+// Database configuration
+$dbHost = 'vnet-simple-database.mysql.database.azure.com';
+$dbUsername = 'vnetadmin';
+$dbPassword = 'Password@123';
+$dbName = 'simple-db';
+
+// Create a database connection
+$conn = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);
+
+// Check for connection errors
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Create the user table
+$sql = "CREATE TABLE users (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(30) NOT NULL,
+    profession VARCHAR(50) NOT NULL
+)";
+
+if (mysqli_query($conn, $sql)) {
+    echo "User table created successfully";
+} else {
+    echo "Error creating user table: " . mysqli_error($conn);
+}
+
+// Close the database connection
+mysqli_close($conn);
+?>
