@@ -1,9 +1,9 @@
 <?php
 // Database configuration mysql -h my-sandbox-app-db.mysql.database.azure.com -u sandbox_admin -p
-$dbHost = 'my-sandbox-app-db.mysql.database.azure.com';
-$dbUsername = 'sandbox_admin';
+$dbHost = 'vnet-simple-database.mysql.database.azure.com';
+$dbUsername = 'vnetadmin';
 $dbPassword = 'Password@123';
-$dbName = 'sandbox_db';
+$dbName = 'simple-db';
 
 // Create a database connection
 $conn = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);
