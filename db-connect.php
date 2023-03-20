@@ -4,7 +4,7 @@ $dbHost = 'vnet-simple-database.mysql.database.azure.com';
 $dbUsername = 'vnetadmin';
 $dbPassword = 'Password@123';
 $dbName = 'simple-db';
-
+print "$dbHost, $dbUsername, $dbPassword, $dbName"; exit;
 // Create a database connection
 $conn = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);
 
